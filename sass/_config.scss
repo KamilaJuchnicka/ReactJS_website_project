@@ -1,0 +1,33 @@
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+    transform: translateY($e);
+}
+
+@mixin transition($e) {
+    -webkit-transition:$e;
+    -moz-transition:$e;
+    transition:$e;
+}
+
+a {
+    text-decoration: none;
+    @include transition(.1s linear);
+    cursor: pointer;
+
+    &:hover {
+        color: #79a9a9;
+        @include transition(.1s linear);
+
+    }
+}
+
+
+
+.container-fluid {
+    line-height: 24px;
+}
+
+.container {
+    line-height: 24px;
+}
